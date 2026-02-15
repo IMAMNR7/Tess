@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin HIMASI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-page">
+  <main class="section container admin-only">
+    <div id="auth-card" class="admin-card">
+      <h2>Admin Login</h2>
+      <p>Halaman ini tidak ditampilkan di website publik.</p>
+      <form id="login-form" class="form-grid">
+        <input id="password-input" type="password" placeholder="Password admin" required />
+        <button type="submit">Masuk</button>
+      </form>
+      <p id="login-msg" class="msg"></p>
+    </div>
+
+    <div id="admin-panel" class="hidden">
+      <div class="admin-topbar">
+        <h2>Kelola Anggota & Program Kerja</h2>
+        <button id="logout-btn" class="danger">Logout</button>
+      </div>
+
+      <div class="admin-grid">
+        <article class="admin-card full">
+          <h3>Tambah / Ganti Data Anggota</h3>
+          <p class="muted">Isi nama sama untuk update foto/jabatan/divisi anggota yang sudah ada.</p>
+          <form id="member-form" class="form-grid">
+            <input name="name" placeholder="Nama anggota" required />
+            <input name="role" placeholder="Jabatan" required />
+            <input name="division" placeholder="Divisi" required />
+            <input name="photo" placeholder="URL foto (https://...)" required />
+            <button type="submit">Simpan Anggota</button>
+          </form>
+          <div id="member-admin-list" class="admin-list"></div>
+        </article>
+
+        <article class="admin-card full">
+          <h3>Kelola Program Kerja</h3>
+          <form id="proker-form" class="form-grid">
+            <input name="title" placeholder="Nama program kerja" required />
+            <textarea name="description" rows="3" placeholder="Deskripsi program kerja" required></textarea>
+            <button type="submit">Simpan Program Kerja</button>
+          </form>
+          <div id="proker-admin-list" class="admin-list"></div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script src="data-store.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

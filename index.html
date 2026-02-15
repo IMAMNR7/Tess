@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIMASI - Himpunan Mahasiswa Sistem Informasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="navbar container">
+      <div class="logo">HIMASI</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#proker">Program Kerja</a></li>
+        <li><a href="#members">Anggota</a></li>
+        <li><a href="#news">Berita</a></li>
+      </ul>
+      <button id="menu-btn" aria-label="Buka menu">☰</button>
+    </nav>
+
+    <div class="hero-content container">
+      <p class="badge">Himpunan Mahasiswa Sistem Informasi</p>
+      <h1>Kolaboratif, Inovatif, dan Berdampak untuk Mahasiswa SI</h1>
+      <p>
+        Selamat datang di portal resmi HIMASI. Semua informasi kegiatan,
+        anggota inti, dan program kerja ditampilkan secara dinamis agar selalu terbaru.
+      </p>
+      <div class="hero-actions">
+        <a class="cta" href="#proker">Lihat Program Kerja</a>
+        <a class="cta secondary" href="#members">Lihat Anggota</a>
+        <a class="cta secondary" id="admin-link" href="admin.html" aria-label="Buka panel admin">Admin</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" id="about">
+      <div class="section-head">
+        <h2>Tentang HIMASI</h2>
+        <p class="muted">Wadah aspirasi dan pengembangan mahasiswa Sistem Informasi.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Visi</h3>
+          <p>Menjadi organisasi mahasiswa SI yang aktif, profesional, dan berkontribusi nyata.</p>
+        </article>
+        <article class="card">
+          <h3>Misi</h3>
+          <p>Menyelenggarakan kegiatan akademik, sosial, dan pengembangan karier secara berkelanjutan.</p>
+        </article>
+        <article class="card">
+          <h3>Nilai</h3>
+          <p>Integritas, inovasi, kolaborasi, dan semangat belajar sepanjang hayat.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt" id="proker">
+      <div class="container">
+        <div class="section-head">
+          <h2>Program Kerja</h2>
+          <p class="muted">Program kerja prioritas yang diperbarui oleh pengurus.</p>
+        </div>
+        <div id="proker-list" class="cards"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="members">
+      <div class="section-head">
+        <h2>Pengurus & Anggota Inti</h2>
+        <p class="muted">Data nama, divisi, jabatan, dan foto terbaru anggota.</p>
+      </div>
+      <div id="member-list" class="member-grid"></div>
+    </section>
+
+    <section class="section alt" id="news">
+      <div class="container">
+        <div class="section-head">
+          <h2>Highlight Kegiatan</h2>
+          <p class="muted">Ringkasan update aktivitas HIMASI.</p>
+        </div>
+        <div id="news-list" class="cards"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 HIMASI - Himpunan Mahasiswa Sistem Informasi</p>
+  </footer>
+
+  <script src="data-store.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
